@@ -1,0 +1,492 @@
+body {
+    margin: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "phone phone phone phone phone phone learn learn learn learn learn learn"
+        "keyboard keyboard keyboard screen screen screen screen screen screen popular popular popular"
+        "games games games experience experience experience experience experience experience popular popular popular"
+        "twitter twitter twitter experience-2 experience-2 experience-2 vision vision vision vision vision vision";
+}
+
+.phone {
+    grid-area: phone;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 50px;
+}
+
+.phone .phone-img {
+    width: 40%;
+    padding-right: 20px;
+}
+
+.phone img {
+    width: 100%;
+}
+
+.phone .phone-content {
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+    padding-left: 70px;
+}
+
+.phone .phone-content .text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(159, 163, 167);
+}
+
+.phone .phone-content h3 {
+    font-family: "Arvo", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    width: 55%;
+}
+
+.phone .phone-content .text-2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    color: rgb(159, 163, 167);
+    width: 85%;
+}
+
+.learn {
+    grid-area: learn;
+    background-color: #F7F8F9;
+    padding-top: 50px;
+}
+
+.learn .learn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learn .learn-content .learn-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(159, 163, 167);
+}
+
+.learn .learn-content h1 {
+    font-family: "Arvo", serif;
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    width: 60%;
+    text-align: center;
+}
+
+.learn .learn-content a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    color: rgb(39, 185, 194);
+}
+
+.keyboard {
+    grid-area: keyboard;
+    background-color: #F05638;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.keyboard img {
+    width: 85%;
+}
+
+.keyboard h3 {
+    font-family: "Arvo", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    color: rgb(255, 251, 251);
+    width: 60%;
+    text-align: center;
+}
+
+.keyboard a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    color: rgb(255, 200, 10);
+    text-decoration: none;
+}
+
+.keyboard span {
+    font-size: 16px;
+}
+
+.screen {
+    grid-area: screen;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.screen .left-content-holder {
+    height: 100%;
+}
+
+.screen .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+.screen .left-content img {
+    width: 140%;
+    position: relative;
+    right: 65%;
+}
+
+.screen .left-content .left-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(159, 163, 167);
+}
+
+.screen .left-content h3 {
+    font-family: "Arvo", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    width: 75%;
+}
+
+.screen .left-content .left-content-speech {
+    padding-top: 50px;
+    padding-left: 65px;
+}
+
+.screen .right-content {
+    align-self: flex-start;
+    padding-top: 50px;
+    padding-right: 70px;
+}
+
+.screen .right-content p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    color: rgb(159, 163, 167);
+}
+
+.screen .right-content a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    color: rgb(39, 185, 194);
+    text-decoration: none;
+}
+
+.screen .right-content span {
+    font-size: 16px;
+}
+
+.popular {
+    grid-area: popular;
+    background-color: #8F76BC;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.popular .top-content {
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    background-color: #8166B0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.popular .top-content .top-content-img {
+    width: 60%;
+    margin: auto;
+}
+
+.popular .top-content .top-content-img img {
+    width: 100%;
+}
+
+.popular .top-content .one {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 23px;
+    background-color: #8B72B6;
+    border-radius: 30%;
+    padding: 0px 25px;
+    color: white;
+    margin-top: 20px;
+}
+
+.popular .top-content .one i {
+    color: #FFC80A;
+    margin-right: 2px;
+}
+
+.popular .top-content span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.popular .bottom-content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-inline: 25px;
+}
+
+.popular .bottom-content h2 {
+    font-family: "Arvo", serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    color: white;
+}
+
+.popular .bottom-content .bottom-content-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    color: white;
+    text-align: center;
+}
+
+.popular .bottom-content button {
+    background-color: #FFC80A;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+.games {
+    grid-area: games;
+    background-color: #F7F8F9;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding-block: 50px;
+}
+
+.games img {
+    width: 70%;
+    position: relative;
+    right: 7%;
+}
+
+.games h3 {
+    font-family: "Arvo", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+
+.games a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    color: rgb(39, 185, 194);
+    text-decoration: none;
+}
+
+.games span {
+    font-size: 16px;
+}
+
+.experience {
+    grid-area: experience;
+    background-color: #93B6B7;
+    background-image: url(../images/5bc2f42d5a5ed97dab707e7e_UX.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experience .exp-top {
+    background-color: #FA684F;
+    border-radius: 30%;
+    padding: 0px 15px;
+    align-self: flex-start;
+    margin: 10px 0px 0px 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 20px;
+    color: white;
+}
+
+.experience .exp-img img {
+    width: 80%;
+}
+
+.experience .exp-middile {
+    width: 100%;
+    text-align: center;
+    padding-inline: 20px;
+}
+
+.experience h3 {
+    font-family: "Arvo", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    color: white;
+    width: 40%;
+    margin: auto;
+}
+
+.twitter {
+    grid-area: twitter;
+    background-color: #38D5F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.twitter-content{
+    background-color: #35CFED;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px 0px;
+}
+.twitter-content .twitter-img img{
+    width: 80%;
+    position: relative;
+    left: 15px;
+}
+.twitter-content .twitter-text{
+    width: 100%;
+    text-align: center;
+    padding: 0px 70px;
+}
+.twitter-content .twitter-text span{
+    font-family: "Arvo", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    color: white;
+}
+.experience-2 {
+    grid-area: experience-2;
+    background-color: #F7F8F9;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px 0px;
+}
+.experience-2 .exp2-top{
+    background-color: #7BC424;
+    border-radius: 30%;
+    padding: 0px 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 20px;
+    color: white;
+}
+.experience-2 .exp2-bottom{
+    width: 100%;
+    text-align: center;
+}
+.experience-2 .exp2-bottom h3{
+    font-family: "Arvo", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    padding: 0px 50px;
+    margin: 0;
+}
+.vision {
+    grid-area: vision;
+    background-color: #2C2C2C;
+    display: flex;
+    align-items: start;
+    gap: 0px 50px;
+}
+.vision .vision-text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.vision .vision-text h3{
+    font-family: "Arvo", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    color: white;
+    width: 70%;
+    position: relative;
+    top: 20px;
+}
+.vision .vision-img img{
+    width: 100%;
+}
